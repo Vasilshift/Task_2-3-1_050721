@@ -7,6 +7,6 @@ import java.util.List;
 public interface UserService {
 
     List<User> showAllUsers();
-    void add(User user);
+    //void add(User user);
 
 }
