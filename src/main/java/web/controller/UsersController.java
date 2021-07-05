@@ -9,10 +9,6 @@ import web.dao.UserDaoImp;
 import web.model.User;
 import web.service.UserService;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
-
 @Controller
 @RequestMapping("/people")
 public class UsersController {

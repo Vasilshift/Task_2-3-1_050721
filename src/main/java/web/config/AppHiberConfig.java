@@ -47,9 +47,10 @@ import java.util.Properties;
 
             Properties properties = new Properties();
 
-            //if decomment this string wich add dialect show Error artefact !!!!!!!!!
-            //properties.put("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect"));
-            
+            /* UGRENT!
+            if decomment this string wich add dialect show Error artefact !!!
+            properties.put("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect")); */
+
             properties.put("hibernate.show_sql", environment.getRequiredProperty("hibernate.show_sql"));
             properties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("hibernate.hbm2ddl.auto"));
             factoryBean.setJpaProperties(properties);
