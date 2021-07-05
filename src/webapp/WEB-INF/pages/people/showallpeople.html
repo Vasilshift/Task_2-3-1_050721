@@ -7,10 +7,16 @@
 </head>
 <body>
 <h2>All users page Index</h2>
+
 <div th:each="user : ${users}">
 
   <a th:href="@{/people/{id}(id=${user.getId()})}"
      th:text="${user.getName()}">user</a>
+
+
+<!--  <th:block th:each="msg : ${messages}">-->
+<!--    <h1 th:text="${msg}"></h1>-->
+<!--  </th:block>-->
 
 </div>
 
