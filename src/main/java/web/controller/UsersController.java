@@ -25,22 +25,22 @@ public class UsersController {
         return "people/showallpeople";
     }
 
-//    @GetMapping("/{id}")
-//    public String show(@PathVariable("id") int id, Model model) {
-//        model.addAttribute("user", userService.show(id));
-//        return "people/show";
-//    }
+    @GetMapping("/{id}")
+    public String show(@PathVariable("id") int id, Model model) {
+        model.addAttribute("user", userService.showOneUser(id));
+        return "people/show";
+    }
 
-//    @GetMapping("/new")
-//    public String newUser(@ModelAttribute("user") User user) {
-//        return "new";
-//    }
-//
-//    @PostMapping()
-//    public String add(@ModelAttribute("user") User user) {
-//        userService.add(user);
-//        return "redirect:/people";
-//    }
+    @GetMapping("/new")
+    public String newUser(@ModelAttribute("user") User user) {
+        return "people/new";
+    }
+
+    @PostMapping()
+    public String add(@ModelAttribute("user") User user) {
+        userService.add(user);
+        return "redirect:/people";
+    }
 
 
 }

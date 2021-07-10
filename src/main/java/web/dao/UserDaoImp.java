@@ -25,16 +25,15 @@ public class UserDaoImp implements UserDao{
         return entityManager.createQuery("select u from User u", User.class).getResultList();
     }
 
-
-//    @Override
-//    public List<User> showAllUsers() {
-//        TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery("from User");
-//        return query.getResultList();
-//    }
-
-//    @Override
-//    public void add(User user) {
-//        sessionFactory.getCurrentSession().save(user);
-//    }
+    @Override
+    public User showOneUser(int id) {
+        TypedQuery<User> query = entityManager.createQuery("From User where id=:id", User.class);
+        query.setParameter("id", id);
+        return query.getResultList().stream().findAny().orElse(null);
+    }
+    @Override
+    public void add(User user) {
+        entityManager.persist(user);
+    }
 
 }

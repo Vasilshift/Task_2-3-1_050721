@@ -17,15 +17,18 @@ public class UserServiceImp implements UserService{
         this.userDao = userDao;
     }
 
-    @Transactional
     @Override
     public List<User> showAllUsers() {
         return userDao.showAllUsers();
     }
 
-//    @Transactional
-//    @Override
-//    public void add(User user) {
-//        userDao.add(user);
-//    }
+    @Override
+    public User showOneUser(int id) {
+        return userDao.showOneUser(id);
+    }
+
+    @Override
+    public void add(User user) {
+        userDao.add(user);
+    }
 }

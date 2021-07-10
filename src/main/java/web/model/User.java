@@ -16,12 +16,24 @@ public class User {
     @Column(name="surname")
     private String surName;
 
+//    @Column(name = "role")
+//    private String role;
+
+//    public String getRole() {
+//        return role;
+//    }
+//
+//    public void setRole(String role) {
+//        this.role = role;
+//    }
+
     public User(){
     }
 
-    public User(String name, String surName) {
+    public User(String name, String surName, String role) {
         this.name = name;
         this.surName = surName;
+        //this.role = role;
     }
 
     public int getId() {
